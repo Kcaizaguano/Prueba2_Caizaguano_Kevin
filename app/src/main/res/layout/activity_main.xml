@@ -7,6 +7,7 @@
     tools:context=".MainActivityKDCC">
 
     <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay">
@@ -17,6 +18,24 @@
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        <TextView
+            android:id="@+id/textViewPuntaje"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Puntaje : 0" />
+
+        <TextView
+            android:id="@+id/textViewNivel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nivel 1" />
+
+        <TextView
+            android:id="@+id/textViewusuario"
+            android:layout_width="133dp"
+            android:layout_height="34dp"
+            android:text="usuario" />
 
     </android.support.design.widget.AppBarLayout>
 

@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.aperez.apps.eventhandlers.PreferenceChangeListener;
 import com.aperez.apps.lifecyclehelpers.QuizViewModel;
@@ -23,6 +24,8 @@ public class MainActivityKDCC extends AppCompatActivity {
     private MainActivityFragment quizFragment;
     private QuizViewModel quizViewModel;
     private OnSharedPreferenceChangeListener preferencesChangeListener;
+
+    TextView textViewusario;
 
     private void setSharedPreferences() {
         PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
@@ -53,6 +56,8 @@ public class MainActivityKDCC extends AppCompatActivity {
         this.setSharedPreferences();
         this.screenSetUp();
         String usuario = getIntent().getStringExtra("usuario");
+        textViewusario = findViewById(R.id.textViewusuario);
+        textViewusario.setText(usuario);
     }
 
     @Override
