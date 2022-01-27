@@ -14,6 +14,7 @@
     <string name="restarting_quiz">Quiz will restart with your new settings</string>
     <string name="question">Question %1$d of %2$d</string>
     <string name="reset_quiz">Reset Quiz</string>
+    <string name="next_level">Siguiente Nivel </string>
     <string name="image_description">Image of the current flag in the quiz</string>
     <string name="default_region">Europe</string>
     <string name="title_activity_settings">Settings</string>

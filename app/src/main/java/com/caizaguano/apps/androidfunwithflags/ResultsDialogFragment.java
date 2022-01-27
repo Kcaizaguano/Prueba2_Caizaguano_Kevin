@@ -27,7 +27,7 @@ public class ResultsDialogFragment extends DialogFragment{
         builder.setMessage(
                 getString(R.string.results, totalGuesses, (1000 / (double) totalGuesses)));
 
-        builder.setPositiveButton(R.string.reset_quiz, new DialogInterface.OnClickListener() {
+        builder.setPositiveButton(R.string.next_level, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 try{
