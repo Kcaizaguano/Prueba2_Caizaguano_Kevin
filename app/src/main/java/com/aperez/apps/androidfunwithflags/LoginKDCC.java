@@ -40,13 +40,18 @@ public class LoginKDCC extends AppCompatActivity {
         String usuario = editTextUsuario.getText().toString();
         String contraseña = editTextContraseña.getText().toString();
 
-        if ((usuario.equals(usuario1) &&  contraseña.equals(contraseña))||(usuario.equals(usuario2)&& contraseña.equals(contraseña))){
+        if (usuario.equals(usuario1) &&  contraseña.equals(contraseña)){
             //Toast.makeText(this, "se inserto con exito", Toast.LENGTH_SHORT).show();
 
             Intent intent = new Intent(this, MainActivityKDCC.class);
+            intent.putExtra("usuario",usuario);
             startActivity(intent);
 
-        }else{
+        }else if (usuario.equals(usuario2) && contraseña.equals(contraseña)){
+            Intent intent = new Intent(this, MainActivityKDCC.class);
+            intent.putExtra("usuario",usuario);
+            startActivity(intent);
+        } else{
             Toast.makeText(this, "Usuario o Contraseña Incorrecta", Toast.LENGTH_LONG).show();
         }
 

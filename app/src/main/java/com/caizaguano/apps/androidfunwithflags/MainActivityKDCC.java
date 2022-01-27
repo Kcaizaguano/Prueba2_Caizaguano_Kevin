@@ -52,6 +52,7 @@ public class MainActivityKDCC extends AppCompatActivity {
         setSupportActionBar(toolbar);
         this.setSharedPreferences();
         this.screenSetUp();
+        String usuario = getIntent().getStringExtra("usuario");
     }
 
     @Override
