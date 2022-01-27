@@ -4,6 +4,7 @@ package com.aperez.apps.androidfunwithflags;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v4.app.DialogFragment;
 import android.arch.lifecycle.ViewModelProviders;
 import android.os.Bundle;
@@ -30,10 +31,13 @@ public class ResultsDialogFragment extends DialogFragment{
         builder.setPositiveButton(R.string.next_level, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
+
+
                 try{
                     MainActivityFragment quizFragment = (MainActivityFragment) getParentFragment();
                     try{
                         quizFragment.resetQuiz();
+
                     }catch (Exception e){
                         Log.e(quizViewModel.getTag(),"Unable to call resetQuiz()", e);
                     }
@@ -44,5 +48,9 @@ public class ResultsDialogFragment extends DialogFragment{
             }
         });
         return builder.create();
+    }
+
+    private void guardarDatos() {
+
     }
 }
