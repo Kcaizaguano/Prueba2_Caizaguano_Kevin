@@ -38,6 +38,7 @@ public class ResultsDialogFragment extends DialogFragment{
                     try{
                         quizFragment.resetQuiz();
 
+
                     }catch (Exception e){
                         Log.e(quizViewModel.getTag(),"Unable to call resetQuiz()", e);
                     }
